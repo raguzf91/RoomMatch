@@ -1,0 +1,3 @@
+ Designed database schema and implemented Domain POJOs 
+- Designed the database schema outlining tables, relationships, and constraints. 
+- Implemented Domain POJOs (Plain Old Java Objects) representing the data model.
