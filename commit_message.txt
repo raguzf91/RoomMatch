@@ -1,3 +1,5 @@
- Designed database schema and implemented Domain POJOs 
-- Designed the database schema outlining tables, relationships, and constraints. 
-- Implemented Domain POJOs (Plain Old Java Objects) representing the data model.
+ Changed The Database design and implemented UserRepository along with couple POJOs
+- New entitiy Listings added
+- Photos entity refactored
+- Profiles entity removed from the database and merged with Users
+- Implemented some POJOs.

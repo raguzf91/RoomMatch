@@ -1,15 +1,23 @@
 package com.raguzf.roommatch.repository;
 
 import java.util.Collection;
+import org.springframework.dao.DataAccessException;
+import com.raguzf.roommatch.model.Gender;
+import com.raguzf.roommatch.model.Role;
+import com.raguzf.roommatch.model.User;
 
-import com.raguzf.roommatch.domain.User;
+public interface UserRepository {
+   
+    User findById(Integer id) throws DataAccessException;
+    Collection<User> findByRole(Role role) throws DataAccessException;
+    void save(User user) throws DataAccessException;
+    Collection<User> findAll() throws DataAccessException;
+    void delete(User user) throws DataAccessException;
 
-public interface UserRepository <T extends User> {
-    T create(T data);
-    Collection<T> list(int page, int pageSize);
-    T get(Integer id);
-    T update(T data);
-    Boolean delete(Integer id);
+    Collection<User> findByFirstName(String firstName) throws DataAccessException;
+    Collection<User> findByLasttName(String lastName) throws DataAccessException;
+    User findByUsername(String username) throws DataAccessException;
+    Collection<User> findByGender(Gender gender) throws DataAccessException;
 
     
 }

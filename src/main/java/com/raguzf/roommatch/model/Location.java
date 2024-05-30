@@ -1,4 +1,4 @@
-package com.raguzf.roommatch.domain;
+package com.raguzf.roommatch.model;
 
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
