@@ -1,5 +1,7 @@
- Changed The Database design and implemented UserRepository along with couple POJOs
-- New entitiy Listings added
-- Photos entity refactored
-- Profiles entity removed from the database and merged with Users
-- Implemented some POJOs.
+Implement security, user registration and login methods, and global exception handler
+
+- Added Spring Security configuration for authentication and authorization
+- Implemented user registration functionality with email verification
+- Developed login method to generate JWT tokens upon successful authentication
+- Created a global exception handler to manage application exceptions effectively
+	
