@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "spring.jpa.servlet.multipart.max-file-size",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.servlet.multipart.max-file-size'"
+  },
+  {
+    "name": "spring.jpa.sql.init.mode",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.sql.init.mode'"
+  },
+  {
+    "name": "spring.jpa.sql.init.continue-on-error",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.jpa.sql.init.continue-on-error'"
+  }
+]}
