@@ -1,9 +1,8 @@
-package com.raguzf.roommatch.model;
-
+package com.raguzf.roommatch.tag;
 import java.util.Set;
-
-import com.raguzf.roommatch.model.common.BaseEntity;
-
+import com.raguzf.roommatch.apartment.Apartment;
+import com.raguzf.roommatch.common.BaseEntity;
+import com.raguzf.roommatch.user.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;

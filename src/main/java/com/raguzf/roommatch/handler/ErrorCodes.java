@@ -1,5 +1,4 @@
 package com.raguzf.roommatch.handler;
-
 import org.springframework.http.HttpStatus;
 import lombok.Getter;
 

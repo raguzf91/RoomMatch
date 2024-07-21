@@ -1,5 +1,4 @@
 package com.raguzf.roommatch.auth;
-
 import lombok.Builder;
 import lombok.Data;
 

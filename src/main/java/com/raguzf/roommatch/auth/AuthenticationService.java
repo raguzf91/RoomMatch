@@ -5,22 +5,21 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import java.security.SecureRandom;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Set;
-import com.raguzf.roommatch.model.User;
-import com.raguzf.roommatch.model.EmailTemplateName;
+import com.raguzf.roommatch.email.EmailService;
+import com.raguzf.roommatch.email.EmailTemplateName;
 import com.raguzf.roommatch.model.Gender;
-import com.raguzf.roommatch.model.Role;
-import com.raguzf.roommatch.model.Token;
-import com.raguzf.roommatch.repository.RoleRepository;
-import com.raguzf.roommatch.repository.TokenRepository;
-import com.raguzf.roommatch.repository.UserRepository;
+import com.raguzf.roommatch.role.Role;
+import com.raguzf.roommatch.role.RoleRepository;
 import com.raguzf.roommatch.security.JwtService;
-import com.raguzf.roommatch.service.EmailService;
+import com.raguzf.roommatch.user.Token;
+import com.raguzf.roommatch.user.TokenRepository;
+import com.raguzf.roommatch.user.User;
+import com.raguzf.roommatch.user.UserRepository;
 import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
 
@@ -59,6 +58,9 @@ public class AuthenticationService {
             .username(request.getUsername())
             .password(passwordEncoder.encode(request.getPassword()))
             .gender(Gender.fromString(request.getGender()))
+            .bio(request.getBio())
+            .address(request.getAddress())
+            .phoneNumber(request.getPhoneNumber())
             .accountLocked(false)
             .enabled(true)
             .roles(Set.of(userRole))

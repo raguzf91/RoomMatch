@@ -1,18 +1,13 @@
-package com.raguzf.roommatch.service;
-
+package com.raguzf.roommatch.security;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
-import com.raguzf.roommatch.repository.UserRepository;
-
-import jakarta.transaction.Transactional;
+import com.raguzf.roommatch.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-@Transactional // when you load the user you load the authorities with it
 public class UserDetailsServiceImpl implements UserDetailsService{
     private final UserRepository repository;
    

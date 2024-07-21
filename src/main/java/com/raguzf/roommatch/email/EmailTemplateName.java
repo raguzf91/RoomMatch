@@ -1,5 +1,4 @@
-package com.raguzf.roommatch.model;
-
+package com.raguzf.roommatch.email;
 import lombok.Getter;
 
 @Getter

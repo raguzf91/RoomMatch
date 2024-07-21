@@ -1,12 +1,16 @@
-package com.raguzf.roommatch.model;
-
+package com.raguzf.roommatch.apartment;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Set;
-
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import com.raguzf.roommatch.listing.Listing;
+import com.raguzf.roommatch.location.Location;
+import com.raguzf.roommatch.photo.Photo;
+import com.raguzf.roommatch.tag.Tag;
+import com.raguzf.roommatch.user.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -49,9 +53,8 @@ public class Apartment {
     private LocalDateTime updatedAt;
 
 
-    //TODO Make it a double 
     @Column(name = "numberOfRooms", nullable = false)
-    private int numberOfRooms;
+    private double numberOfRooms;
 
     @Column(name = "area", nullable = false)
     @Min(value = 0)
@@ -63,6 +66,7 @@ public class Apartment {
     @OneToOne(mappedBy = "apartment", cascade = CascadeType.ALL)
     private Location location;
 
+    @Column(name = "isListed")
     @Default
     private boolean isListed = false;
 
@@ -70,7 +74,7 @@ public class Apartment {
     private Listing listing;
 
     @OneToMany(mappedBy = "apartment", cascade = CascadeType.ALL)
-    private Set<Photo> photos;
+    private List<Photo> photos;
 
     @ManyToMany
     @JoinTable(
@@ -79,5 +83,9 @@ public class Apartment {
         inverseJoinColumns = @JoinColumn(name = "tagId")
     )
     private Set<Tag> tags;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "userId", nullable = false)
+    private User user;
 
 }

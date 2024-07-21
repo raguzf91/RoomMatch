@@ -1,6 +1,12 @@
-package com.raguzf.roommatch.model;
+package com.raguzf.roommatch.user;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.raguzf.roommatch.model.common.BaseEntity;
+import com.raguzf.roommatch.apartment.Apartment;
+import com.raguzf.roommatch.common.BaseEntity;
+import com.raguzf.roommatch.listing.Listing;
+import com.raguzf.roommatch.model.Gender;
+import com.raguzf.roommatch.photo.Photo;
+import com.raguzf.roommatch.role.Role;
+import com.raguzf.roommatch.tag.Tag;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,6 +17,8 @@ import jakarta.persistence.*;
 import java.security.Principal;
 import java.time.LocalDate;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import org.springframework.security.core.GrantedAuthority;
@@ -78,7 +86,10 @@ public class User extends BaseEntity implements UserDetails, Principal {
     private Set<Listing> listings;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.LAZY)
-    private Set<Photo> photos;
+    private List<Photo> photos;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Apartment> apartments;
 
     @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
     @JoinTable(
@@ -123,6 +134,19 @@ public class User extends BaseEntity implements UserDetails, Principal {
 
     public String getFullName () {
         return this.firstName + this.lastName;
+    }
+
+    public void addListing(Listing listing) {
+        if (this.listings == null) {
+            this.listings = new HashSet<>();
+        }
+        this.listings.add(listing);
+    }
+
+    public void removeListing(Listing listing) {
+        if (this.listings != null) {
+            this.listings.remove(listing);
+        }
     }
 
 

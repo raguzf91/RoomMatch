@@ -1,6 +1,7 @@
-package com.raguzf.roommatch.model;
-import com.raguzf.roommatch.model.common.BaseEntity;
-
+package com.raguzf.roommatch.listing;
+import com.raguzf.roommatch.apartment.Apartment;
+import com.raguzf.roommatch.common.BaseEntity;
+import com.raguzf.roommatch.user.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

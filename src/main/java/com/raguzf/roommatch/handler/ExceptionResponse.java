@@ -1,10 +1,7 @@
 package com.raguzf.roommatch.handler;
-
 import java.util.Map;
 import java.util.Set;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

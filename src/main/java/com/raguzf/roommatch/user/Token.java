@@ -1,9 +1,6 @@
-package com.raguzf.roommatch.model;
-
+package com.raguzf.roommatch.user;
 import java.time.LocalDateTime;
-
-import com.raguzf.roommatch.model.common.BaseEntity;
-
+import com.raguzf.roommatch.common.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;

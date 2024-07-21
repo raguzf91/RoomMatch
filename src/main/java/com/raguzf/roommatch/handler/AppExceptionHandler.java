@@ -1,7 +1,6 @@
 package com.raguzf.roommatch.handler;
 import java.util.HashSet;
 import java.util.Set;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;

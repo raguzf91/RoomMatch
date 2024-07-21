@@ -38,4 +38,10 @@ public class RegistrationRequest {
 
     @NotEmpty(message = "Gender Cannot Be Null")
     private String gender;
+
+    private String bio;
+
+    private String address;
+
+    private String phoneNumber;
 }

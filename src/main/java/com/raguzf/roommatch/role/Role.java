@@ -1,9 +1,8 @@
-package com.raguzf.roommatch.model;
-
+package com.raguzf.roommatch.role;
 import java.util.Set;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.raguzf.roommatch.model.common.BaseEntity;
-
+import com.raguzf.roommatch.common.BaseEntity;
+import com.raguzf.roommatch.user.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
