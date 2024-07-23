@@ -18,6 +18,7 @@ import lombok.RequiredArgsConstructor;
 
 /**
  * Service class for mapping between Apartment entities and their DTO representations.
+ * @author raguzf
  */
 @Service
 @RequiredArgsConstructor

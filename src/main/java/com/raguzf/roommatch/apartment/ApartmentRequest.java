@@ -6,7 +6,8 @@ import com.raguzf.roommatch.location.LocationDTO;
 import com.raguzf.roommatch.photo.PhotoDTO;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
-
+import lombok.Builder;
+@Builder
 public record ApartmentRequest(
     Integer id,
 

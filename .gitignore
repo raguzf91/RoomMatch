@@ -31,3 +31,14 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### docker ###
+Dockerfile
+commit_message.txt
+git
+FETCH_HEAD
+.env
+.env.dev
+start-dev.sh
+roommatch-0.0.1-SNAPSHOP.jar
+roommatch-0.0.1-SNAPSHOT.jar.original

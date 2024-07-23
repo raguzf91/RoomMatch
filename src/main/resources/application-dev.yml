@@ -1,32 +1,15 @@
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/RoomMatch
-    username: root
-    password: 1234
-  jpa:
-    hibernate:
-      ddl-auto: update
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-    show-sql: false
-    properties:
-      hibernate:
-        format_sql: true
-        dialect: org.hibernate.dialect.MySQLDialect
-  mail:
-    host: localhost
-    port: 1025
-    username: raga
-    password: raga
-    properties:
-      mail:
-        smtp:
-          trust: "*"
-          auth: true
-          starttls:
-            enable: true
-          connectiontimeout: 5000
-          timeout: 3000
-          writetimeout: 5000
+ACTIVE_PROFILE: dev
+MYSQL_USERNAME: root
+MYSQL_PASSWORD: 1234
+MYSQL_HOST: localhost
+MYSQL_PORT: 3306
+MYSQL_DATABASE: RoomMatch
+CONTAINER_PORT: 8080
+MAIL_HOST: localhost
+MAIL_PORT: 1025
+MAIL_ID: raguzf
+MAIL_PASSWORD: raguzf
+
+
 
     
